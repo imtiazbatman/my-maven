@@ -16,7 +16,7 @@ jobs:
           distribution: 'temurin'  # Use Temurin JDK
           java-version: '17'       # Replace with your required version
 
-      - name: Cache Maven dependencies
+      - name: Cache Maven dependencie
         uses: actions/cache@v4
         with:
           path: ~/.m2/repository
