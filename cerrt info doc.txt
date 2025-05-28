@@ -1,0 +1,15 @@
+mail  URGENT: CDC Prod certificate with chain
+
+command :
+show the certs 
+
+openssl s_client -showcerts -servername console-openshift-console.apps.ocp.amos-managed.nsandi.com -connect console-openshift-console.apps.ocp.amos-managed.nsandi.com:443 </dev/null | sed -n -e '/BEGIN\ CERTIFICATE/,/END\ CERTIFICATE/ p'
+
+gettign three cert 
+
+first wala is called the domain cert
+second is called the intermediate cert
+and third is called root cert
+
+
+so the root cert signs the intermediate cert and the intermediate cert signs the domain cert
